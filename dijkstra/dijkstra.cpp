@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+using namespace std;
+typedef pair<int, int> vertice_pesso;
 
 
 
@@ -50,8 +52,22 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Leitura Numero de vertices e arestas do grafo
-    int N, m;
-    fin >> N >> m;
+    
+    int n, m; // n = número de vértices, m = número de arestas
+    fin >> n >> m;
     fin.close();
+
+    int v1, v2, pesso; // vertice, vertice e pesso.
+    
+    list<pair<int, int>> arestas[V + 1]; //Array de listas de pares de inteiros 
+    
+    //ex: Aresta do vértice 1 ao vértice 2 com peso 5 -> arestas[1].push_back(make_pair(2, 5));
+    
+    for (int i = 0; i < m; i++){  // Lê as arestas 
+        
+        fin >> v1 >> v2 >> pesso;
+        
+        arestas[v2].push_back(make_pair(v1, pesso));
+        arestas[v1].push_back(make_pair(v2, pesso));
+    }
 }
