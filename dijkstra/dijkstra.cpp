@@ -4,7 +4,11 @@ using namespace std;
 typedef pair<int, int> vertice_pesso;
 
 
+vector <int> dijkstra(int num_v, list<vertice_pesso> * arestas[], int v_init){
 
+
+
+}
 
 
 int main(int argc, char *argv[])
@@ -41,21 +45,21 @@ int main(int argc, char *argv[])
     }
 
     if (in == ""){
-        cerr << "No input file specified. Use the -f parameter." << endl;
+        cerr << "Sem input especificado. Use o parametro -f" << endl;
         return 1;
     }
 
-    ifstream fin(in);
+    ifstream fin(in); // Abre o arquivo de entrada
     
     if (!fin){
-        cerr << "Could not open input file: " << in << endl;
+        cerr << "Não foi possível abrir o arquivo de input: " << in << endl;
         return 1;
     }
 
     
     int n, m; // n = número de vértices, m = número de arestas
     fin >> n >> m;
-    fin.close();
+
 
     int v1, v2, pesso; // vertice, vertice e pesso.
     
@@ -67,7 +71,13 @@ int main(int argc, char *argv[])
         
         fin >> v1 >> v2 >> pesso;
         
-        arestas[v2].push_back(make_pair(v1, pesso));
         arestas[v1].push_back(make_pair(v2, pesso));
+        arestas[v2].push_back(make_pair(v1, pesso));
     }
+    fin.close(); // Fecha o arquivo de entrada
+
+    
+    // Dijkstra
+     vector<int> dist_v_inicial = dijkstra(n, arestas, init);
+
 }
