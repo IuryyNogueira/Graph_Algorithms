@@ -1,6 +1,6 @@
 CC = g++
 
-all: dijkstra
+all: prim
 
-dijkstra: dijkstra.cpp
-	$(CC) dijkstra.cpp -o dijkstra.bin
+prim: prim.cpp
+	$(CC) prim.cpp -o prim.bin
