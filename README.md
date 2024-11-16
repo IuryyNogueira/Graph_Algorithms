@@ -4,6 +4,12 @@ Welcome to the **Graph Algorithms** repository, where i implement a set of graph
 
 ---
 
+## **Team Members**
+
+- Iury Kauann David Nogueira (email: ikdn@ic.ufal.br)
+- Clauderlan Batista Alves   (email: cba@ic.ufal.br)
+
+
 ## **Project Structure**
 
 Each algorithm is placed in its own directory with a corresponding `Makefile` for easy compilation. 
