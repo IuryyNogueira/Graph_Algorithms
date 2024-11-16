@@ -1,6 +1,6 @@
 CXX=g++
 CXXFLAGS=-std=c++11 -Wall
-TARGET=kruskal
+TARGET=kruskal.bin
 
 all: $(TARGET)
 
